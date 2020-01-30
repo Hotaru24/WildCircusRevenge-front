@@ -3,6 +3,7 @@ import {Redirect, Link} from 'react-router-dom';
 import axios from 'axios';
 import CtxAdmin from './CtxAdmin';
 import { CtxEvents} from './CtxEvents';
+import '../CSS/AdminPage.css';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
@@ -100,21 +101,17 @@ const AdminPage = () => {
     {!admin.name && <Redirect to='/login'/>}
         <div id="postEvent">
           <h1><strong>Admin</strong></h1>
-          
-          <div id="obl">
-            <p>* Champs obligatoires</p>
-          </div>
-          <form className={classes.root} noValidate autoComplete="off">
+           <form className={classes.root} noValidate autoComplete="off">
             <TextField
               id="standard-basic"
-              label="nom"
+              label="title"
               variant="standard"
               value={form.title}
               onChange={(event) => setForm({ ...form, title: event.target.value })}
             />
             <TextField
               id="standard-basic"
-              label="objet"
+              label="description"
               multiline
               rows="7"
               variant="standard"
@@ -123,7 +120,7 @@ const AdminPage = () => {
             />
             <TextField
               id="standard-basic"
-              label="email"
+              label="price"
               required="required"
               variant="standard"
               value={form.price}
@@ -131,7 +128,7 @@ const AdminPage = () => {
             />
             <TextField
               id="standard-multiline-static"
-              label="message"
+              label="picture"
               required="required"
               placeholder="En cas de signalement préciser le numéro de l'annonce"
               variant="standard"
@@ -140,9 +137,8 @@ const AdminPage = () => {
             />
             <TextField
               id="standard-multiline-static"
-              label="message"
+              label="date"
               required="required"
-              placeholder="En cas de signalement préciser le numéro de l'annonce"
               variant="standard"
               value={form.date}
               onChange={(event) => setForm({ ...form, date: event.target.value })}
@@ -168,7 +164,7 @@ const AdminPage = () => {
                   )
                 }
               >
-                Message envoyé !
+                Event online !
               </Alert>
             </Collapse>
           </div>
@@ -181,11 +177,11 @@ const AdminPage = () => {
             aria-describedby="alert-dialog-slide-description"
             onClick={handleClose}
           >
-            <Alert severity="error">Vous devez remplir les champs obligatoires</Alert>
+            <Alert severity="error">You have to complete all fields</Alert>
           </Dialog>
         </div>
         <div id='deleteEvent'>
-          <label> Numéro de l'annonce :
+          <label> event's number :
             <input onChange={handleInput} type="text" name="Numéro de l'annonce" />
           </label>
 
@@ -195,7 +191,7 @@ const AdminPage = () => {
                 <th scope="col">Id</th>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
-                <th scope="col">Supprimer</th>
+                <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>

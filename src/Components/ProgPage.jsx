@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
   gridList: {
     width: 600,
     height: 400,
-    border: "solid 1px"
   },
 }));
 
@@ -27,7 +26,7 @@ const ProgPage = () => {
   
   return (
     <div id="ProgPageBody">
-      
+      <h2>Events to come</h2>
       <GridList cellHeight={160} cellWidth={100} className={classes.gridList} cols={3}>
         <EventList/>
       </GridList>

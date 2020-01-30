@@ -4,3 +4,10 @@
   flex-direction: column;
   align-items: center;
 }
+#ProgPageBody h1 {
+  margin-bottom: 30px;
+}
+
+.react-calendar{
+  margin-top: 50px;
+}
