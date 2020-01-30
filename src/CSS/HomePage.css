@@ -1,0 +1,39 @@
+#homeHeader {
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 250px;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: goldenrod;
+}
+
+#homeBody {
+  margin: 60px 15% 80px 15%;
+}
+
+#homeBody section {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#homeBody section:first-child {
+  height: 25%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid darkgray 0.25px;
+}
+#homeBody section:nth-child(2) {
+  height: 75%;
+}

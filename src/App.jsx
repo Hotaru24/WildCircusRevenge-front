@@ -9,6 +9,7 @@ import Event from './Components/Event';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import CtxAdmin from './Components/CtxAdmin';
+import { EventsProvider } from './Components/CtxEvents';
 import './CSS/App.css';
 import { apiEndPoint } from './config';
 import axios from 'axios';
@@ -40,6 +41,7 @@ const App = () => {
       <div className="App">
         <Navbar/>
         <CtxAdmin.Provider value={[admin, setAdmin]}>
+        <EventsProvider>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/progPage" component={ProgPage} />
@@ -48,6 +50,7 @@ const App = () => {
             <Route path="/login" component={Login} />
             <Route path="/info" component={InfoPage} />
           </Switch>
+        </EventsProvider>
         </CtxAdmin.Provider>
         <Footer/>
       </div>
