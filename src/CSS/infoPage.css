@@ -1,0 +1,46 @@
+#infoPageBody{
+  margin: 60px 15% 60px 15%; 
+}
+
+#infoPageBody p{
+ text-align: justify; 
+}
+
+.leaflet-container
+{
+  height: 200px;
+  width: 350px;
+
+}
+
+.leaflet-container.leaflet-touch-drag {
+  border-radius: 1%;
+  height: 200px;
+  width: 350px;
+
+}
+
+#map {
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#adress{
+  margin-right: 20px;
+}
+
+#info{
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 60px;
+  margin: 55px 0 40px;
+  border-bottom: solid darkgray 0.25px;
+  border-top: solid darkgray 0.25px;
+}
+
+#hours,
+#accessibility{
+  width: 45%;
+}

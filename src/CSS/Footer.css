@@ -1,0 +1,108 @@
+#footer {
+  width: 100%;
+	height: 180px;
+	color: grey;
+  background-color:#1c2125;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5% 0px 5%;
+}
+
+#footerBody {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer h1{
+  display: unset;
+  font-size: 1.75rem;
+  font-family: 'Bangers', cursive;
+  color: goldenrod;
+}
+
+#footer a {
+  text-decoration:none;
+  color: gray;
+	cursor: pointer;
+	letter-spacing: 1.5px;
+}
+
+#footer a:hover {
+  color: goldenrod;
+}
+
+#footer  img {
+  width: 30px;
+  filter: invert(50%);
+}
+
+#footer  img:hover {
+  filter: invert(90%);
+}
+
+#icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+#juridic{
+  font-size: 0.95rem;
+  width: 60%;
+  text-align: center;
+}
+
+/*=============================_SMALL MOBILE (media queries)_=============================*/
+
+@media screen and (max-width: 500px)
+{
+  #footer {
+    height: 250px;
+  }
+
+
+}
+
+/*=============================== DESCKTOP (media queries)_===============================*/
+@media screen and (min-width: 750px)
+{
+  #footer {
+    width: 100%;
+    height: 120px;
+    color:
+    grey;
+    background-color:
+    #1c2125;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: unset;
+}
+  
+  #footerBody {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+   
+  #icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #juridic{
+    font-size: 0.95rem;
+    margin-top: none;
+    width: auto;
+  }
+
+
+}
